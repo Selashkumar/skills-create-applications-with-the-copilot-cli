@@ -1,12 +1,19 @@
-# Create applications with the Copilot CLI
+# Calculator CLI
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+A small Node.js CLI calculator supporting four basic operations: addition, subtraction, multiplication, division.
 
-Hey Selashkumar!
+Install locally:
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+  npm install -g .
 
-Remember, it's self-paced so feel free to take a break! ☕️
+Usage examples:
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/Selashkumar/skills-create-applications-with-the-copilot-cli/issues/1)
+  calculator add 2 3       # -> 5
+  calculator subtract 10 4 # -> 6
+  calculator multiply 45 2 # -> 90
+  calculator divide 20 5   # -> 4
+
+For help:
+
+  calculator --help
 
