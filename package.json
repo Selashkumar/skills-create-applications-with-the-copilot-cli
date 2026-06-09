@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Selashkumar/skills-create-applications-with-the-copilot-cli#readme",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "bin": {
+    "calculator": "src/calculator.js"
   }
 }
