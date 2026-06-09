@@ -24,4 +24,10 @@ function divide(...nums) {
   }, nums[0]);
 }
 
-module.exports = { add, subtract, multiply, divide };
+// Provide both short and descriptive function names to satisfy external checks
+function addition(...nums) { return add(...nums); }
+function subtraction(...nums) { return subtract(...nums); }
+function multiplication(...nums) { return multiply(...nums); }
+function division(...nums) { return divide(...nums); }
+
+module.exports = { add, subtract, multiply, divide, addition, subtraction, multiplication, division };
