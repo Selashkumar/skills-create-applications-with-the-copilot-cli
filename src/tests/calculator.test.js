@@ -30,11 +30,23 @@ describe('Calculator library', () => {
       expect(modulo(10, 3)).toBe(1);
     });
 
+    test('modulo 5 % 2 => 1 (image example)', () => {
+      expect(modulo(5, 2)).toBe(1);
+    });
+
     test('power 2 ** 8 => 256', () => {
       expect(power(2, 8)).toBe(256);
     });
 
+    test('power 2 ^ 3 => 8 (image example)', () => {
+      expect(power(2, 3)).toBe(8);
+    });
+
     test('squareRoot 16 => 4', () => {
+      expect(squareRoot(16)).toBe(4);
+    });
+
+    test('square root √16 => 4 (image example)', () => {
       expect(squareRoot(16)).toBe(4);
     });
   });
