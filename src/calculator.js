@@ -1,12 +1,27 @@
 #!/usr/bin/env node
 
-// Node.js CLI Calculator
-// Supported operations: add, subtract, multiply, divide
-// Examples:
-//   node src/calculator.js add 2 3      -> 5
-//   node src/calculator.js subtract 5 2 -> 3
-//   node src/calculator.js multiply 2 3 -> 6
-//   node src/calculator.js divide 6 2   -> 3
+/*
+  Node.js CLI Calculator
+
+  Supported operations (as requested / shown in the provided image):
+  - add (+)           : addition
+  - subtract (-)      : subtraction
+  - multiply (x, ×, *) : multiplication
+  - divide (÷, /)     : division
+
+  Examples:
+    node src/calculator.js add 2 3        -> 5
+    node src/calculator.js + 2 3          -> 5
+    node src/calculator.js subtract 5 2   -> 3
+    node src/calculator.js - 5 2          -> 3
+    node src/calculator.js multiply 4 6   -> 24
+    node src/calculator.js x 4 6          -> 24
+    node src/calculator.js divide 10 2    -> 5
+    node src/calculator.js ÷ 10 2         -> 5
+
+  The script accepts multiple numeric operands for add, multiply. For subtract and divide
+  it applies operations left-to-right (e.g., "subtract 10 3 2" -> (10 - 3) - 2).
+*/
 
 function usage() {
   console.error('Usage: node src/calculator.js <operation> <num1> <num2> [<num3> ...]');
