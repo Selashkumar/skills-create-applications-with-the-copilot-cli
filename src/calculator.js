@@ -29,7 +29,7 @@ function usage() {
   console.error('Example: node src/calculator.js add 1 2 3');
 }
 
-const { parseNumber, normalizeOp, compute } = require('./calculator-lib');
+const { parseNumber, normalizeOp, compute, squareRoot } = require('./calculator-lib');
 
 function parseNumbers(arr) {
   const nums = arr.map(n => {
@@ -128,6 +128,45 @@ function main() {
           }
           return a / b;
         }, numbers[0]);
+        break;
+
+      case 'mod':
+      case '%':
+      case 'modulo':
+        // modulo expects exactly two operands
+        if (numbers.length !== 2) {
+          console.error('Error: modulo expects exactly two operands');
+          process.exit(1);
+        }
+        if (numbers[1] === 0) {
+          console.error('Error: modulo by zero');
+          process.exit(2);
+        }
+        result = numbers[0] % numbers[1];
+        break;
+
+      case 'pow':
+      case '^':
+      case '**':
+      case 'power':
+        if (numbers.length !== 2) {
+          console.error('Error: power expects exactly two operands');
+          process.exit(1);
+        }
+        result = Math.pow(numbers[0], numbers[1]);
+        break;
+
+      case 'sqrt':
+      case 'squareroot':
+        if (numbers.length !== 1) {
+          console.error('Error: sqrt expects exactly one operand');
+          process.exit(1);
+        }
+        if (numbers[0] < 0) {
+          console.error('Error: square root of negative number');
+          process.exit(2);
+        }
+        result = Math.sqrt(numbers[0]);
         break;
 
       case '--help':
